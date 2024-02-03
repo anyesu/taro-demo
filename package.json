@@ -16,5 +16,22 @@
   },
   "license": "MIT",
   "author": "anyesu (https://github.com/anyesu)",
-  "scripts": {}
+  "scripts": {},
+  "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "4.1.0",
+    "@typescript-eslint/eslint-plugin": "6.7.2",
+    "@vue/eslint-config-prettier": "7.0.0",
+    "@vue/eslint-config-typescript": "12.0.0",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-formatter-pretty": "5.0.0",
+    "eslint-plugin-jest": "27.6.0",
+    "eslint-plugin-n": "16.1.0",
+    "eslint-plugin-regexp": "1.15.0",
+    "eslint-plugin-unicorn": "40.1.0",
+    "eslint-plugin-vue": "9.23.0",
+    "prettier": "2.8.8",
+    "prettier-plugin-organize-attributes": "0.0.5",
+    "prettier-plugin-packagejson": "2.3.0"
+  }
 }

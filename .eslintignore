@@ -1,0 +1,9 @@
+# defaults:
+# - node_modules/ is ignored.
+# - Dotfiles (include .eslintrc.*) as well as Dotfolders and their contents are ignored.
+/*
+!packages/*/src
+!packages/*/config
+!packages/*/__tests__
+*.d.ts
+*.html
