@@ -2,6 +2,8 @@
 # - node_modules/ is ignored.
 # - Dotfiles (include .eslintrc.*) as well as Dotfolders and their contents are ignored.
 /*
+!packages
+packages/*/*
 !packages/*/src
 !packages/*/config
 !packages/*/__tests__
