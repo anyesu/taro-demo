@@ -1,0 +1,20 @@
+{
+  "name": "taro-demo",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Taro Demos",
+  "keywords": [
+    "taro"
+  ],
+  "homepage": "https://github.com/anyesu/taro-demo",
+  "bugs": {
+    "url": "https://github.com/anyesu/taro-demo/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anyesu/taro-demo"
+  },
+  "license": "MIT",
+  "author": "anyesu (https://github.com/anyesu)",
+  "scripts": {}
+}
