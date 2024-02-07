@@ -129,7 +129,7 @@ module.exports = {
       },
     },
     {
-      files: ['__tests__/**'],
+      files: ['**/__tests__/**'],
       plugins: ['jest'],
       extends: ['plugin:jest/recommended'],
     },
