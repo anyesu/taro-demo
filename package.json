@@ -17,6 +17,7 @@
   "license": "MIT",
   "author": "anyesu (https://github.com/anyesu)",
   "scripts": {
+    "clear-all": "npx rimraf@5 -g **/node_modules pnpm-lock.yaml",
     "postinstall": "simple-git-hooks",
     "lint": "run-s -snc lint:*",
     "lint-staged:eslint": "eslint --cache --ext .js,.cjs,.mjs,.ts,.cts,.mts,.vue --format=pretty",
