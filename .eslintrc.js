@@ -17,6 +17,11 @@ const tsRules = {
   ],
 };
 
+const reactRules = {
+  'react/jsx-uses-react': 0,
+  'react/react-in-jsx-scope': 0,
+};
+
 const vueRules = {
   // 组件属性遵从小程序规范（全小写，kebab-case）
   'vue/attribute-hyphenation': [2, 'always'],
@@ -137,6 +142,14 @@ module.exports = {
       files: ['**/*.ts'],
       extends: ['plugin:@typescript-eslint/recommended', '@vue/prettier'],
       rules: tsRules,
+    },
+    {
+      files: ['js', 'jsx', 'ts', 'tsx'].map((s) => `**/*react*/**/*.${s}`),
+      extends: ['taro/react', '@vue/typescript/recommended', '@vue/prettier'],
+      rules: {
+        ...tsRules,
+        ...reactRules,
+      },
     },
     {
       files: ['**/*.vue'],
