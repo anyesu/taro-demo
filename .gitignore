@@ -295,6 +295,6 @@ package-lock.json
 pnpm-lock.yaml
 yarn.lock
 # unplugin-auto-import
-src/types/auto-imports.d.ts
+**/src/types/auto-imports.d.ts
 # unplugin-vue-components
-src/types/components.d.ts
+**/src/types/components.d.ts

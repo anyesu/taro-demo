@@ -1,13 +1,42 @@
+import NutUIResolver from '@nutui/auto-import-resolver';
 import { defineConfig, type UserConfigExport } from '@tarojs/cli';
+import type { IH5Config } from '@tarojs/taro/types/compile';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
+import AutoImport from 'unplugin-auto-import/webpack';
+import Components from 'unplugin-vue-components/webpack';
 import devConfig from './dev';
 import prodConfig from './prod';
+
+const webpackChain: IH5Config['webpackChain'] = (chain) => {
+  chain.plugin('unplugin-auto-import').use(
+    AutoImport({
+      dts: 'src/types/auto-imports.d.ts',
+      dirs: ['src/hooks'],
+      imports: [{ vue: [['default', 'Vue']] }, 'vue'],
+    }),
+  );
+
+  chain.plugin('unplugin-vue-components').use(
+    Components({
+      dts: 'src/types/components.d.ts',
+      include: [/\.[jt]sx?$/, /\.vue$/, /\.vue\?vue/], // https://github.com/jdf2e/nutui/issues/2461#issuecomment-1655315897
+      resolvers: [
+        NutUIResolver({
+          taro: true,
+          importStyle: false, // 样式不需要按需引入，避免优先级问题
+        }),
+      ],
+    }),
+  );
+
+  chain.resolve.plugin('tsconfig-paths').use(TsconfigPathsPlugin);
+};
 
 // https://taro-docs.jd.com/docs/next/config#defineconfig-辅助函数
 export default defineConfig(async (merge) => {
   const baseConfig: UserConfigExport = {
     projectName: 'taro-demo-vue3',
-    designWidth: 750,
+    designWidth: 375, // 全局使用 NutUI 的 375 尺寸
     deviceRatio: {
       640: 2.34 / 2,
       750: 1,
@@ -16,7 +45,9 @@ export default defineConfig(async (merge) => {
     },
     sourceRoot: 'src',
     outputRoot: 'dist',
-    plugins: [],
+    plugins: [
+      '@tarojs/plugin-html', // 支持 HTML 标签
+    ],
     defineConstants: {},
     copy: {
       patterns: [],
@@ -47,9 +78,7 @@ export default defineConfig(async (merge) => {
           },
         },
       },
-      webpackChain(chain) {
-        chain.resolve.plugin('tsconfig-paths').use(TsconfigPathsPlugin);
-      },
+      webpackChain,
     },
     h5: {
       publicPath: '/',
@@ -76,9 +105,7 @@ export default defineConfig(async (merge) => {
           },
         },
       },
-      webpackChain(chain) {
-        chain.resolve.plugin('tsconfig-paths').use(TsconfigPathsPlugin);
-      },
+      webpackChain,
     },
     rn: {
       appName: 'taroDemo',

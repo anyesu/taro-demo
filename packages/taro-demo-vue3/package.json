@@ -34,9 +34,11 @@
   ],
   "dependencies": {
     "@babel/runtime": "^7.21.5",
+    "@nutui/nutui-taro": "4.3.4",
     "@tarojs/components": "3.6.25",
     "@tarojs/helper": "3.6.25",
     "@tarojs/plugin-framework-vue3": "3.6.25",
+    "@tarojs/plugin-html": "3.6.25",
     "@tarojs/plugin-platform-alipay": "3.6.25",
     "@tarojs/plugin-platform-h5": "3.6.25",
     "@tarojs/plugin-platform-harmony-hybrid": "3.6.25",
@@ -52,6 +54,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.0",
+    "@nutui/auto-import-resolver": "1.0.0",
     "@tarojs/cli": "3.6.25",
     "@tarojs/taro-loader": "3.6.25",
     "@tarojs/test-utils-vue3": "^0.1.1",
@@ -75,6 +78,8 @@
     "stylelint": "^14.4.0",
     "ts-node": "^10.9.1",
     "tsconfig-paths-webpack-plugin": "^4.1.0",
+    "unplugin-auto-import": "0.17.5",
+    "unplugin-vue-components": "0.26.0",
     "vue-loader": "^17.1.0",
     "webpack": "5.78.0"
   },

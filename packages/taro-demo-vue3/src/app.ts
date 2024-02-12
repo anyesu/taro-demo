@@ -1,4 +1,5 @@
 import { createApp } from 'vue';
+import '@nutui/nutui-taro/dist/style.css';
 import './app.scss';
 
 const App = createApp({
