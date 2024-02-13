@@ -6,5 +6,9 @@ export default {
     stats: true,
   },
   mini: {},
-  h5: {},
+  h5: {
+    devServer: {
+      open: false,
+    },
+  },
 } satisfies UserConfigExport;
