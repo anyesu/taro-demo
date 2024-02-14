@@ -48,7 +48,10 @@ export default defineConfig(async (merge) => {
     plugins: [
       '@tarojs/plugin-html', // 支持 HTML 标签
     ],
-    defineConstants: {},
+    defineConstants: {
+      // https://vuejs.org/api/compile-time-flags.html
+      __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: JSON.stringify(false),
+    },
     copy: {
       patterns: [],
       options: {},
