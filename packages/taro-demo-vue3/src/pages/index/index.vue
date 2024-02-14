@@ -14,7 +14,7 @@
     <view class="index-navs">
       <nut-cell-group v-for="group in navs" :key="group.name" :title="group.name">
         <template v-for="{ name, path } in group.children" :key="name">
-          <nut-cell :is-link="true" :title="name" @click="navigateTo(group.name, path)" />
+          <nut-cell :is-link="true" :title="name" @click="navigateTo(group.path, path)" />
         </template>
       </nut-cell-group>
     </view>
@@ -23,21 +23,10 @@
 
 <script setup lang="ts">
 import Taro from '@tarojs/taro';
-
-interface NavGroup {
-  name: string;
-  children: Nav[];
-}
-
-interface Nav {
-  name: string;
-  path: string;
-}
-
-const navs = ref<NavGroup[]>([]);
+import { navs } from './constants';
 
 function navigateTo(group: string, path: string) {
-  Taro.navigateTo({ url: `/pages/${group.toLowerCase()}/${path}` });
+  Taro.navigateTo({ url: `/pages/${group}/${path}` });
 }
 </script>
 
