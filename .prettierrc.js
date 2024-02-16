@@ -17,8 +17,6 @@ module.exports = {
   plugins: ['prettier-plugin-packagejson', '@ianvs/prettier-plugin-sort-imports'],
   importOrder: [
     '<BUILTIN_MODULES>', // Node.js built-in modules
-    '^vue(/.*)?$',
-    '^vue.+$',
     '<THIRD_PARTY_MODULES>', // Imports not matched by other special words or groups.
     // Relative imports, keep css modules at the bottom
     '^@/.*(?<!\\.s?css)$',

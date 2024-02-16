@@ -1,6 +1,6 @@
-import NutUIResolver from '@nutui/auto-import-resolver';
 import { defineConfig, type UserConfigExport } from '@tarojs/cli';
 import type { IH5Config } from '@tarojs/taro/types/compile';
+import NutUIResolver from '@nutui/auto-import-resolver';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 import AutoImport from 'unplugin-auto-import/webpack';
 import Components from 'unplugin-vue-components/webpack';
