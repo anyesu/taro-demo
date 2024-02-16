@@ -20,10 +20,11 @@ module.exports = {
     '^vue(/.*)?$',
     '^vue.+$',
     '<THIRD_PARTY_MODULES>', // Imports not matched by other special words or groups.
+    // Relative imports, keep css modules at the bottom
     '^@/.*(?<!\\.s?css)$',
-    '^[./]', // relative imports
-    '^(?!@/).*\\.s?css$',
-    '^@/.*\\.s?css$',
+    '^[./].*(?<!\\.s?css)$',
+    '^@/.*$',
+    '^[./].*$',
   ],
   htmlWhitespaceSensitivity: 'ignore', // https://github.com/prettier/prettier/issues/5844#issuecomment-462309084
   bracketSameLine: false, // https://github.com/prettier/prettier/issues/5377
