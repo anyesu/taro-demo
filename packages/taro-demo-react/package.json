@@ -34,6 +34,8 @@
   ],
   "dependencies": {
     "@babel/runtime": "^7.21.5",
+    "@taroify/core": "0.1.6-alpha.0",
+    "@taroify/icons": "0.1.6-alpha.0",
     "@tarojs/components": "3.6.25",
     "@tarojs/helper": "3.6.25",
     "@tarojs/plugin-framework-react": "3.6.25",
@@ -65,6 +67,7 @@
     "@types/webpack-env": "^1.13.6",
     "@typescript-eslint/eslint-plugin": "^6.2.0",
     "@typescript-eslint/parser": "^6.2.0",
+    "babel-plugin-import": "1.13.8",
     "babel-preset-taro": "3.6.25",
     "eslint": "^8.12.0",
     "eslint-config-taro": "3.6.25",
