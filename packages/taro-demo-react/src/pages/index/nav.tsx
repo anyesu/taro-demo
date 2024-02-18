@@ -1,5 +1,5 @@
 import { Navigator, View } from '@tarojs/components';
-import type { ReactNode } from 'react';
+import type { PropsWithChildren, ReactNode } from 'react';
 import { ArrowRight } from '@taroify/icons';
 import styles from './nav.module.scss';
 
@@ -21,10 +21,9 @@ export function NavBlock(props: NavBlockProps) {
 
 interface NavProps {
   title?: string;
-  children?: ReactNode;
 }
 
-export default function Nav(props: NavProps) {
+export default function Nav(props: PropsWithChildren<NavProps>) {
   const { title, children } = props;
   return (
     <View className={styles.nav}>
