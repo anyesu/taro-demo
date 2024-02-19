@@ -25,6 +25,7 @@
     "dev:swan": "npm run build:swan -- --watch",
     "dev:tt": "npm run build:tt -- --watch",
     "dev:weapp": "npm run build:weapp -- --watch",
+    "lint:ts": "tsc",
     "test": "jest"
   },
   "browserslist": [

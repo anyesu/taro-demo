@@ -19,13 +19,14 @@
   "scripts": {
     "clear-all": "npx rimraf@5 -g **/node_modules pnpm-lock.yaml",
     "postinstall": "simple-git-hooks",
-    "lint": "run-s -snc lint:*",
+    "lint": "pnpm run \"/^lint:.*/\"",
     "lint-staged:eslint": "eslint --cache --ext .js,.cjs,.mjs,.ts,.cts,.mts,.vue --format=pretty",
     "lint-staged:prettier": "prettier --write --ignore-unknown",
     "lint-staged:style": "stylelint --custom-formatter=node_modules/stylelint-formatter-pretty --aei",
     "lint:eslint": "npm run lint-staged:eslint -- .",
     "lint:prettier": "prettier -c .",
-    "lint:style": "npm run lint-staged:style -- **/*.scss"
+    "lint:style": "npm run lint-staged:style -- **/*.scss",
+    "lint:ts": "pnpm --parallel -r lint:ts"
   },
   "simple-git-hooks": {
     "pre-commit": "npx --no-install lint-staged --concurrent false"
@@ -50,7 +51,6 @@
     "eslint-plugin-unicorn": "40.1.0",
     "eslint-plugin-vue": "9.23.0",
     "lint-staged": "14.0.1",
-    "npm-run-all": "4.1.5",
     "postcss-scss": "4.0.9",
     "prettier": "2.8.8",
     "prettier-plugin-organize-attributes": "0.0.5",
