@@ -5,7 +5,6 @@ const order = [
   //
   '^@tarojs/',
   'react',
-  '^@taroify/',
 ];
 
 importOrder.splice(1, 0, ...order);

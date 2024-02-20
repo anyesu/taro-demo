@@ -23,14 +23,7 @@ export default defineConfig(async (merge) => {
       options: {},
     },
     framework: 'react',
-    compiler: {
-      type: 'webpack5',
-      // 仅 webpack5 支持依赖预编译配置
-      prebundle: {
-        // PreBundle 与 @taroify/icons 不兼容： `No matching export in ...` `import { createVanIconComponent } from "./van"`
-        exclude: ['@taroify/icons'],
-      },
-    },
+    compiler: 'webpack5',
     cache: {
       enable: false, // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
     },
@@ -70,7 +63,6 @@ export default defineConfig(async (merge) => {
         filename: 'css/[name].[hash].css',
         chunkFilename: 'css/[name].[chunkhash].css',
       },
-      esnextModules: ['@taroify'],
       postcss: {
         autoprefixer: {
           enable: true,
