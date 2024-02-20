@@ -7,7 +7,7 @@ import prodConfig from './prod';
 export default defineConfig(async (merge) => {
   const baseConfig: UserConfigExport = {
     projectName: 'taro-demo-react',
-    designWidth: 750,
+    designWidth: 375, // 全局使用 NutUI 的 375 尺寸
     deviceRatio: {
       640: 2.34 / 2,
       750: 1,
@@ -16,14 +16,24 @@ export default defineConfig(async (merge) => {
     },
     sourceRoot: 'src',
     outputRoot: 'dist',
-    plugins: [],
+    plugins: [
+      '@tarojs/plugin-html', // 支持 HTML 标签
+    ],
     defineConstants: {},
     copy: {
       patterns: [],
       options: {},
     },
     framework: 'react',
-    compiler: 'webpack5',
+    compiler: {
+      type: 'webpack5',
+      // 仅 webpack5 支持依赖预编译配置
+      prebundle: {
+        // PreBundle 与 @nutui/nutui-react-taro 不兼容
+        // - https://nutui.jd.com/taro/react/2x/#/zh-CN/guide/start-react#3%E3%80%81%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%A1%B9%E7%9B%AE%E8%BF%90%E8%A1%8C%E6%97%B6%E5%87%BA%E7%8E%B0%E3%80%8C%E6%89%BE%E4%B8%8D%E5%88%B0%E6%A8%A1%E6%9D%BF%E3%80%8D%E7%9A%84%E9%94%99%E8%AF%AF%E6%8F%90%E7%A4%BA
+        exclude: ['@nutui/nutui-react-taro', '@nutui/icons-react-taro'],
+      },
+    },
     cache: {
       enable: false, // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
     },

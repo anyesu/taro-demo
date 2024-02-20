@@ -10,4 +10,16 @@ module.exports = {
       },
     ],
   ],
+  plugins: [
+    [
+      'import',
+      {
+        libraryName: '@nutui/nutui-react-taro',
+        libraryDirectory: 'dist/esm',
+        style: false, // 样式不需要按需引入，避免优先级问题
+        camel2DashComponentName: false,
+      },
+      'nutui-react-taro',
+    ],
+  ],
 };
