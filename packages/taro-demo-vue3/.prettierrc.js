@@ -6,7 +6,6 @@ const order = [
   '^@tarojs/',
   '^vue(/.*)?$',
   '^vue.+$',
-  '^@nutui/',
 ];
 
 importOrder.splice(1, 0, ...order);

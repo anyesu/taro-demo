@@ -1,5 +1,6 @@
 <template>
   <nut-config-provider class="layout-screen" :theme-vars>
+    <biz-navbar v-if="isWeb" :title />
     <view class="layout-content">
       <slot />
     </view>
@@ -7,6 +8,14 @@
 </template>
 
 <script setup lang="ts">
+defineProps<Props>();
+
+interface Props {
+  title?: string;
+}
+
+const isWeb = process.env.TARO_ENV === 'h5';
+
 const themeVars = ref({
   primaryColor: '#a681fd',
 });
@@ -21,9 +30,10 @@ const themeVars = ref({
   flex-direction: column;
 
   .layout-content {
-    height: 100%;
+    flex: auto;
+    min-height: 0;
     background: #f7f8fa;
-    padding: 30px 25px;
+    padding: 20px;
   }
 }
 </style>

@@ -1,0 +1,14 @@
+.layout-screen {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+
+  .layout-content {
+    flex: auto;
+    min-height: 0;
+    background: #f7f8fa;
+    padding: 20px;
+  }
+}

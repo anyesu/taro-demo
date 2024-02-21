@@ -1,11 +1,7 @@
 <template>
   <view class="index">
     <view class="index-header">
-      <image
-        alt=""
-        src="https://img14.360buyimg.com/imagetools/jfs/t1/167902/2/8762/791358/603742d7E9b4275e3/e09d8f9a8bf4c0ef.png"
-        srcset=""
-      />
+      <image :src="NUT_UI_LOGO" />
       <view class="info">
         <h1>NutUI</h1>
         <p>京东风格的轻量级小程序组件库</p>
@@ -23,7 +19,7 @@
 
 <script setup lang="ts">
 import Taro from '@tarojs/taro';
-import { navs } from './constants';
+import { navs, NUT_UI_LOGO } from './constants';
 
 function navigateTo(group: string, path: string) {
   Taro.navigateTo({ url: `/pages/${group}/${path}` });

@@ -4,7 +4,7 @@ const importOrder = [...base.importOrder];
 const order = [
   //
   '^@tarojs/',
-  'react',
+  '^react$',
 ];
 
 importOrder.splice(1, 0, ...order);
