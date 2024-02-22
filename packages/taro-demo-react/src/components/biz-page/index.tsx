@@ -6,7 +6,7 @@ import { BizNavBar, TargetH5 } from '@/components';
 import useTitle from '@/hooks/useTitle';
 import './index.scss';
 
-interface Props {
+export interface BizPageProps extends PropsWithChildren {
   className?: string;
   title?: string;
 }
@@ -19,7 +19,7 @@ const theme = {
   nutuiColorPrimaryStop2: primaryColor,
 };
 
-export default function BizPage(props: PropsWithChildren<Props>) {
+export default function BizPage(props: BizPageProps) {
   const { className, title, children } = props;
 
   useTitle(title);

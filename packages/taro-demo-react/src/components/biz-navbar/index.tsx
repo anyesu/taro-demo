@@ -1,9 +1,8 @@
 import { Image, Text, View } from '@tarojs/components';
-import type { PropsWithChildren } from 'react';
 import { ArrowLeft } from '@nutui/icons-react-taro';
 import './index.scss';
 
-interface Props {
+export interface BizNavBarProps {
   title?: string;
 }
 
@@ -14,7 +13,7 @@ function onClickBack() {
   window.history.back();
 }
 
-export default function BizNavBar({ title }: PropsWithChildren<Props>) {
+export default function BizNavBar({ title }: BizNavBarProps) {
   return (
     <View className="applets-demo-header-wrapper">
       <View className="applets-demo-header">

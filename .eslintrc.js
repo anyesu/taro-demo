@@ -50,7 +50,7 @@ const vueRules = {
     2,
     {
       script: {
-        lang: 'ts',
+        lang: ['ts', 'tsx'],
       },
       style: {
         lang: 'scss',
@@ -86,7 +86,7 @@ const vueRules = {
   'vue/multiline-html-element-content-newline': 0,
   'vue/multi-word-component-names': 0,
   'vue/no-restricted-html-elements': [
-    2,
+    1,
     {
       element: 'div',
       message: 'Use <view /> instead. ',
@@ -176,6 +176,7 @@ module.exports = {
     'unicorn/consistent-destructuring': 0,
     'unicorn/filename-case': 0,
     'unicorn/prefer-object-from-entries': 0,
+    'unicorn/prefer-query-selector': 0,
     'unicorn/prevent-abbreviations': 0,
     'unicorn/no-abusive-eslint-disable': 0,
     'unicorn/no-array-callback-reference': 0,

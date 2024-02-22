@@ -1,5 +1,5 @@
 export interface NavConfig {
-  name: string;
+  name?: string;
   path: string;
 }
 

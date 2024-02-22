@@ -2,7 +2,7 @@ import { useLaunch } from '@tarojs/taro';
 import type { PropsWithChildren } from 'react';
 import './app.scss';
 
-function App({ children }: PropsWithChildren<any>) {
+function App({ children }: PropsWithChildren) {
   useLaunch(() => {
     console.log('App launched.');
   });
