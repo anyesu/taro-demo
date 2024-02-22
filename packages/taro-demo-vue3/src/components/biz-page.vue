@@ -8,13 +8,15 @@
 </template>
 
 <script setup lang="ts">
-defineProps<Props>();
+import { isWeb } from '@/utils';
+
+const props = defineProps<Props>();
 
 interface Props {
   title?: string;
 }
 
-const isWeb = process.env.TARO_ENV === 'h5';
+useTitle(() => props.title);
 
 const themeVars = ref({
   primaryColor: '#a681fd',
