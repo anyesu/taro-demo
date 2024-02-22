@@ -1,7 +1,16 @@
+$height: 57px;
+
+.applets-demo-header-wrapper {
+  height: $height;
+}
 .applets-demo-header {
-  position: relative;
-  height: 57px;
-  line-height: 57px;
+  position: fixed;
+  z-index: 20000;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $height;
+  line-height: $height;
   text-align: center;
   background: #fff;
   font-weight: bold;

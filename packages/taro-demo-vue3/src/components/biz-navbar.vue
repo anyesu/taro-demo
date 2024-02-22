@@ -1,17 +1,18 @@
 <template>
-  <view class="applets-demo-header">
-    <view class="back" @click="onClickBack">
-      <left />
+  <view class="applets-demo-header-wrapper">
+    <view class="applets-demo-header">
+      <view class="back" @click="onClickBack">
+        <left />
+      </view>
+      <view class="applets-icon">
+        <image :src="appletsIcon" />
+      </view>
+      <text>{{ title }}</text>
     </view>
-    <view class="applets-icon">
-      <image :src="appletsIcon" />
-    </view>
-    <text>{{ title }}</text>
   </view>
 </template>
 
 <script setup lang="ts">
-import Taro from '@tarojs/taro';
 import { Left } from '@nutui/icons-vue-taro';
 
 defineProps<Props>();
@@ -23,16 +24,25 @@ interface Props {
 const appletsIcon =
   'https://img13.360buyimg.com/imagetools/jfs/t1/67106/30/23857/9375/63b4df85Fce5fd959/35265019206515fe.png';
 
-async function onClickBack() {
-  await Taro.navigateBack();
+function onClickBack() {
+  window.history.back();
 }
 </script>
 
 <style scoped lang="scss">
+$height: 57px;
+
+.applets-demo-header-wrapper {
+  height: $height;
+}
 .applets-demo-header {
-  position: relative;
-  height: 57px;
-  line-height: 57px;
+  position: fixed;
+  z-index: 20000;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $height;
+  line-height: $height;
   text-align: center;
   background: #fff;
   font-weight: bold;
