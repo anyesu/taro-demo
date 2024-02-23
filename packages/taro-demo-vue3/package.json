@@ -52,6 +52,7 @@
     "@tarojs/runtime": "3.6.25",
     "@tarojs/shared": "3.6.25",
     "@tarojs/taro": "3.6.25",
+    "css.escape": "1.5.1",
     "vue": "3.4.21"
   },
   "devDependencies": {
@@ -61,6 +62,7 @@
     "@tarojs/taro-loader": "3.6.25",
     "@tarojs/test-utils-vue3": "0.1.1",
     "@tarojs/webpack5-runner": "3.6.25",
+    "@types/css.escape": "1.5.2",
     "@types/jest": "29.5.12",
     "@types/webpack-env": "1.18.4",
     "@vue/babel-plugin-jsx": "1.2.2",
