@@ -19,6 +19,10 @@ export const navs: Readonly<NavGroupConfig>[] = [
         name: 'NavBar 头部导航',
         path: 'navbar',
       },
+      {
+        name: 'Portal 传送门',
+        path: 'portal',
+      },
     ],
   },
 ];

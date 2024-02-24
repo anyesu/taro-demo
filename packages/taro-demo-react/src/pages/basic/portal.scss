@@ -1,0 +1,15 @@
+.transform-container {
+  transform: scale(1);
+}
+
+.nut-popup {
+  max-height: unset;
+}
+
+.nut-cell-group-title {
+  margin-top: 0;
+}
+
+.nut-cell-group-wrap {
+  border-radius: 0; // fixme .nut-cell-group-wrap 同时设置了 `overflow: hidden` 和 `border-radius` 导致微信开发者工具中 fixed 失效时，切换 popup 会闪烁
+}
