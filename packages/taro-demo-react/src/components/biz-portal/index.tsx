@@ -1,10 +1,10 @@
 import { View } from '@tarojs/components';
-import { createPortal } from '@tarojs/react';
-import type { TaroNode } from '@tarojs/runtime';
+import type { TaroElement } from '@tarojs/runtime';
 import { createContext, useCallback, useContext, useState, type PropsWithChildren } from 'react';
+import { createPortal } from 'react-dom';
 import { useTaroPage } from '@/hooks/useTaro';
 
-export type BizPortalTarget = TaroNode | null | undefined;
+export type BizPortalTarget = TaroElement | null | undefined;
 
 export interface BizPortalProps extends PropsWithChildren {
   /**
@@ -54,5 +54,5 @@ export default function BizPortal(props: BizPortalProps) {
   const targetNode =
     target ||
     (root ? (root === 'first' ? pageNode?.firstChild : pageNode) : provideTarget ?? pageNode);
-  return enable && targetNode ? createPortal(children, targetNode) : children;
+  return enable && targetNode ? createPortal(children, targetNode as any) : children;
 }
