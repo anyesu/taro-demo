@@ -26,4 +26,12 @@ module.exports = {
   ],
   htmlWhitespaceSensitivity: 'ignore', // https://github.com/prettier/prettier/issues/5844#issuecomment-462309084
   bracketSameLine: false, // https://github.com/prettier/prettier/issues/5377
+  overrides: [
+    {
+      files: 'CODE_OF_CONDUCT.md',
+      options: {
+        proseWrap: 'preserve',
+      },
+    },
+  ],
 };

@@ -16,6 +16,20 @@
   },
   "license": "MIT",
   "author": "anyesu (https://github.com/anyesu)",
+  "contributors": [
+    {
+      "name": "anyesu",
+      "url": "https://github.com/anyesu",
+      "img": "https://avatars0.githubusercontent.com/u/13103906?v=4",
+      "info": [
+        "🔥"
+      ]
+    },
+    {
+      "name": "You?",
+      "url": "https://github.com/anyesu/taro-demo/blob/main/CONTRIBUTING.md"
+    }
+  ],
   "scripts": {
     "clear-all": "npx rimraf@5 -g **/node_modules pnpm-lock.yaml",
     "postinstall": "simple-git-hooks",
@@ -26,7 +40,9 @@
     "lint:eslint": "npm run lint-staged:eslint -- .",
     "lint:prettier": "prettier -c .",
     "lint:style": "npm run lint-staged:style -- **/*.scss",
-    "lint:ts": "pnpm --parallel -r lint:ts"
+    "lint:ts": "pnpm --parallel -r lint:ts",
+    "prepare": "in-install && patch-package || not-in-install",
+    "readme": "npx @appnest/readme generate -c readmeTemplates/blueprint.json && npm run lint-staged:prettier ./README*.md"
   },
   "simple-git-hooks": {
     "pre-commit": "npx --no-install lint-staged --concurrent false"
@@ -37,6 +53,7 @@
     "**/*.scss": "npm run lint-staged:style"
   },
   "devDependencies": {
+    "@appnest/readme": "1.2.7",
     "@ianvs/prettier-plugin-sort-imports": "4.1.0",
     "@types/node": "18.15.11",
     "@typescript-eslint/eslint-plugin": "6.21.0",
@@ -50,7 +67,9 @@
     "eslint-plugin-regexp": "1.15.0",
     "eslint-plugin-unicorn": "40.1.0",
     "eslint-plugin-vue": "9.23.0",
+    "in-publish": "2.0.1",
     "lint-staged": "14.0.1",
+    "patch-package": "npm:@milahu/patch-package@6.4.14",
     "postcss-scss": "4.0.9",
     "prettier": "2.8.8",
     "prettier-plugin-organize-attributes": "0.0.5",

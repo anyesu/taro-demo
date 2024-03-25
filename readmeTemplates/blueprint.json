@@ -1,0 +1,36 @@
+{
+  "input": "readmeTemplates/index.md",
+  "line": "none",
+  "headingPrefix": {
+    "1": "",
+    "2": ""
+  },
+  "ids": {
+    "branch": "main",
+    "githubUsername": "anyesu",
+    "github": "anyesu/taro-demo",
+    "githubFull": "https://github.com/anyesu/taro-demo",
+    "name": "taro-demo"
+  },
+  "badges": [
+    {
+      "alt": "License",
+      "url": "{{ ids.githubFull }}",
+      "img": "{{ ids.githubFull }}/blob/{{ ids.branch }}/LICENSE"
+    },
+    {
+      "alt": "visitors",
+      "url": "{{ ids.githubFull }}",
+      "img": "https://visitor-badge.laobi.icu/badge?page_id={{ ids.github }}"
+    }
+  ],
+  "templates": [
+    {
+      "name": "description",
+      "template": "{{ pkg.description }}"
+    }
+  ],
+  "data": {
+    "startYear": 2024
+  }
+}
