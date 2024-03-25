@@ -2,7 +2,7 @@
 
 <p align="center">
 		<a href="https://github.com/anyesu/taro-demo/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/anyesu/taro-demo.svg" height="20"/></a>
-<a href="https://github.com/anyesu/taro-demo"><img alt="License" src="https://github.com/anyesu/taro-demo/blob/main/LICENSE" height="20"/></a>
+<a href="https://github.com/anyesu/taro-demo/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg" height="20"/></a>
 <a href="https://github.com/anyesu/taro-demo"><img alt="visitors" src="https://visitor-badge.laobi.icu/badge?page_id=anyesu/taro-demo" height="20"/></a>
 	</p>
 
@@ -15,37 +15,47 @@
 
 ## Table of Contents
 
+- [📦 Packages](#-packages)
 - [🚀 Usage](#-usage)
 - [👥 Contributing](#-contributing)
 - [🙏 Show your support](#-show-your-support)
 - [📝 License](#-license)
 </details>
 
+[](#-packages)
+
+## 📦 Packages
+
+| Package | Framework | UI |
+| --- | --- | --- |
+| [taro-demo-react](packages/taro-demo-react) | **React** | [NutUI React Taro](https://github.com/jdf2e/nutui-react) |
+| [taro-demo-vue3](packages/taro-demo-vue3) | **Vue3** | [NutUI Vue Taro](https://github.com/jdf2e/nutui) |
+
 [](#-usage)
 
 ## 🚀 Usage
 
-- **Get the Source Code**
+**Get the Source Code**
 
-  ```shell
-  $ git clone https://github.com/anyesu/taro-demo
-  $ cd taro-demo
-  ```
+```shell
+$ git clone https://github.com/anyesu/taro-demo
+$ cd taro-demo
+```
 
-- **Installation**
+**Installation**
 
-  ```shell
-  $ pnpm i
-  ```
+```shell
+$ pnpm i
+```
 
-- **Run**
+**Run**
 
-  ```shell
-  # cd packages/taro-demo-react
-  $ cd packages/taro-demo-vue3
+```shell
+$ # cd packages/taro-demo-react
+$ cd packages/taro-demo-vue3
 
-  $ pnpm dev:h5
-  ```
+$ pnpm dev:h5
+```
 
 [](#-contributing)
 

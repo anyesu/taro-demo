@@ -15,8 +15,8 @@
   "badges": [
     {
       "alt": "License",
-      "url": "{{ ids.githubFull }}",
-      "img": "{{ ids.githubFull }}/blob/{{ ids.branch }}/LICENSE"
+      "url": "{{ ids.githubFull }}/blob/{{ ids.branch }}/LICENSE",
+      "img": "https://img.shields.io/badge/license-MIT-blue.svg"
     },
     {
       "alt": "visitors",
