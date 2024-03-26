@@ -1,21 +1,20 @@
 {
   "input": "readmeTemplates/index.md",
-  "line": "none",
+  "line": "rainbow",
   "headingPrefix": {
     "1": "",
     "2": ""
   },
   "ids": {
-    "branch": "main",
-    "githubUsername": "anyesu",
     "github": "anyesu/taro-demo",
+    "githubUser": "anyesu",
     "githubFull": "https://github.com/anyesu/taro-demo",
-    "name": "taro-demo"
+    "githubBranch": "https://github.com/anyesu/taro-demo/blob/main"
   },
   "badges": [
     {
       "alt": "License",
-      "url": "{{ ids.githubFull }}/blob/{{ ids.branch }}/LICENSE",
+      "url": "{{ ids.githubBranch }}/LICENSE",
       "img": "https://img.shields.io/badge/license-MIT-blue.svg"
     },
     {
@@ -31,6 +30,19 @@
     }
   ],
   "data": {
+    "packages": [
+      ["Package", "Framework", "UI"],
+      [
+        "[taro-demo-react](packages/taro-demo-react)",
+        "**React**",
+        "[NutUI React Taro](https://github.com/jdf2e/nutui-react)"
+      ],
+      [
+        "[taro-demo-vue3](packages/taro-demo-vue3)",
+        "**Vue3**",
+        "[NutUI Vue Taro](https://github.com/jdf2e/nutui)"
+      ]
+    ],
     "startYear": 2024
   }
 }

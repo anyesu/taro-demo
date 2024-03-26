@@ -1,9 +1,6 @@
 ## 📦 Packages
 
-| Package | Framework | UI |
-| --- | --- | --- |
-| [taro-demo-react](packages/taro-demo-react) | **React** | [NutUI React Taro](https://github.com/jdf2e/nutui-react) |
-| [taro-demo-vue3](packages/taro-demo-vue3) | **Vue3** | [NutUI Vue Taro](https://github.com/jdf2e/nutui) |
+{{ data.packages }}
 
 ## 🚀 Usage
 
@@ -11,7 +8,7 @@
 
 ```shell
 $ git clone {{ ids.githubFull }}
-$ cd {{ ids.name }}
+$ cd {{ pkg.name }}
 ```
 
 **Installation**

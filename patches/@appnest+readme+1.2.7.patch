@@ -4,7 +4,7 @@
 #   @appnest/readme: 1.2.7
 #
 diff --git a/node_modules/@appnest/readme/cli.cjs.js b/node_modules/@appnest/readme/cli.cjs.js
-index 35c90b6..55f8c64 100644
+index 35c90b6..6c4df0c 100644
 --- a/node_modules/@appnest/readme/cli.cjs.js
 +++ b/node_modules/@appnest/readme/cli.cjs.js
 @@ -123,10 +123,6 @@ function githubBadges({
@@ -18,16 +18,38 @@ index 35c90b6..55f8c64 100644
      "alt": "Contributors",
      "url": `https://github.com/${githubId}/graphs/contributors`,
      "img": `https://img.shields.io/github/contributors/${githubId}.svg`
-@@ -801,7 +797,7 @@ function contributorsTemplate({
+@@ -579,7 +575,7 @@ function lineTemplate({
+     url = `https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/${line}.png`;
+   }
+ 
+-  return `![-----------------------------------------------------](${url})`;
++  return `<img alt="-----------------------------------------------------" src="${url}" width="100%" />`;
+ }
+ /**
+  * Creates a template for the title.
+@@ -613,8 +609,8 @@ function badgesTemplate({
+   config
+ }) {
+   return `<p align="center">
+-		${badges.map(badge => `<a href="${badge.url}"><img alt="${badge.alt}" src="${badge.img}" height="20"/></a>`).join(config.lineBreak)}
+-	</p>
++${badges.map(badge => `  <a href="${badge.url}"><img alt="${badge.alt}" src="${badge.img}" height="20" /></a>`).join(config.lineBreak)}
++</p>
+ `;
+ }
+ /**
+@@ -801,9 +797,7 @@ function contributorsTemplate({
    const imageSize = 100; // Split the contributors into multiple arrays (one for each row)
  
    const rows = splitArrayIntoArrays(contributors, contributorsPerRow);
 -  return `## Contributors
-+  return `## 👥 Contributing
- 	
- ${rows.map(row => {
+-	
+-${rows.map(row => {
++  return `${rows.map(row => {
      // Compile the rows
-@@ -1424,7 +1420,7 @@ async function generate({
+     const imgs = row.map(({
+       img,
+@@ -1424,7 +1418,7 @@ async function generate({
    }); // Add warning
  
    const warning = `<!-- ⚠️ This README has been generated from the file(s) "${Array.isArray(config.input) ? config.input.join(", ") : config.input}" ⚠️-->`;
