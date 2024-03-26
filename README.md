@@ -66,7 +66,7 @@ $ pnpm dev:h5
 | 🔥 |
 
 Contributions, issues and feature requests are welcome!  
-Feel free to check [issues page](https://github.com/anyesu/taro-demo/issues). You can also take a look at the [contributing guide](https://github.com/anyesu/taro-demo/blob/main/CONTRIBUTING.md).
+Feel free to check [issues page](https://github.com/anyesu/taro-demo/issues). You can also take a look at the [contributing guidelines](https://github.com/anyesu/.github/blob/main/CONTRIBUTING.md).
 
 [<img alt="-----------------------------------------------------" src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" />](#-show-your-support)
 

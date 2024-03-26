@@ -15,7 +15,7 @@
 {{ template:contributors }}
 
 Contributions, issues and feature requests are welcome!  
-Feel free to check [issues page]({{ ids.githubFull }}/issues). You can also take a look at the [contributing guide]({{ ids.githubBranch }}/CONTRIBUTING.md).
+Feel free to check [issues page]({{ ids.githubFull }}/issues). You can also take a look at the [contributing guidelines](https://github.com/anyesu/.github/blob/main/CONTRIBUTING.md).
 
 ## 🙏 Show your support
 
