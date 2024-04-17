@@ -66,7 +66,6 @@
     "@types/jest": "29.5.12",
     "@types/webpack-env": "1.18.4",
     "@vue/babel-plugin-jsx": "1.2.2",
-    "@vue/language-server": "2.0.7",
     "babel-preset-taro": "3.6.25",
     "css-loader": "3.4.2",
     "eslint-config-taro": "3.6.25",
